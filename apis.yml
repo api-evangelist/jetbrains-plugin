@@ -56,7 +56,7 @@ common:
     url: https://plugins.jetbrains.com/developers/marketplace
   - type: GitHub Documentation
     url: https://github.com/JetBrains/marketplace-docs
-  - type: Sign Up
+  - type: SignUp
     url: https://account.jetbrains.com/login
   - type: Pricing
     url: https://plugins.jetbrains.com/legal/marketplace-paid-plugins
