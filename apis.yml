@@ -48,6 +48,8 @@ apis:
         url: https://plugins.jetbrains.com/docs/marketplace/plugin-update-download.html
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/jetbrains-marketplace
   - type: Website
     url: https://plugins.jetbrains.com
   - type: Documentation
