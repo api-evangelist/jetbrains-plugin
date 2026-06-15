@@ -1,0 +1,98 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains Marketplace API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Plugins list (deprecated)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://plugins.jetbrains.com/plugins/list/",
+        "params": [
+          {
+            "name": "build",
+            "value": "",
+            "type": "query",
+            "description": "Format: <productCode>-<buildNumber> (e.g. IU-171.3780.107)"
+          }
+        ]
+      },
+      "docs": "Returns a list of plugins compatible with a given IDE build."
+    },
+    {
+      "info": {
+        "name": "Plugin details by id",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://plugins.jetbrains.com/plugins/list",
+        "params": [
+          {
+            "name": "pluginId",
+            "value": "",
+            "type": "query",
+            "description": "Numeric plugin id or XML id (e.g. org.intellij.scala or 1347)"
+          }
+        ]
+      },
+      "docs": "Returns plugin information (versions, channels) for a single plugin."
+    },
+    {
+      "info": {
+        "name": "Upload a plugin update",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://plugins.jetbrains.com/api/updates/upload",
+        "body": {
+          "type": "multipart-form",
+          "data": [
+            {
+              "name": "pluginId",
+              "type": "text",
+              "value": ""
+            },
+            {
+              "name": "xmlId",
+              "type": "text",
+              "value": ""
+            },
+            {
+              "name": "file",
+              "type": "text",
+              "value": ""
+            },
+            {
+              "name": "channel",
+              "type": "text",
+              "value": ""
+            },
+            {
+              "name": "isHidden",
+              "type": "text",
+              "value": ""
+            },
+            {
+              "name": "containsAds",
+              "type": "text",
+              "value": ""
+            }
+          ]
+        },
+        "auth": {
+          "type": "bearer",
+          "token": "{{bearerToken}}"
+        }
+      },
+      "docs": "Uploads a new plugin update to the JetBrains Marketplace. Max 400 MB."
+    }
+  ],
+  "bundled": true
+}
