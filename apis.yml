@@ -54,11 +54,11 @@ common:
     url: https://plugins.jetbrains.com
   - type: Documentation
     url: https://plugins.jetbrains.com/docs/marketplace/about-marketplace.html
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://plugins.jetbrains.com/developers/marketplace
   - type: GitHub Documentation
     url: https://github.com/JetBrains/marketplace-docs
-  - type: SignUp
+  - type: Signup
     url: https://account.jetbrains.com/login
   - type: Pricing
     url: https://plugins.jetbrains.com/legal/marketplace-paid-plugins
