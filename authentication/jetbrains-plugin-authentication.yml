@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/jetbrains-plugin-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearerToken
+  type: http
+  scheme: bearer
+  bearerFormat: PermanentToken
+  description: JetBrains Hub permanent token
+  sources:
+  - openapi/jetbrains-plugin-openapi.yml

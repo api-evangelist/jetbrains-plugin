@@ -48,6 +48,12 @@ apis:
         url: https://plugins.jetbrains.com/docs/marketplace/plugin-update-download.html
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/jetbrains-plugin-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/jetbrains-plugin-domain-security.yml
+  - type: Authentication
+    url: authentication/jetbrains-plugin-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/showcase/jetbrains-marketplace
   - type: Website
