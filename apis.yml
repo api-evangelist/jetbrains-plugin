@@ -48,6 +48,8 @@ apis:
         url: https://plugins.jetbrains.com/docs/marketplace/plugin-update-download.html
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/jetbrains-plugin-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/jetbrains-plugin-vulnerability-disclosure.yml
   - type: DomainSecurity
