@@ -1,64 +1,36 @@
 openapi: 3.1.0
 info:
-  title: JetBrains Marketplace API
-  description: |
-    Subset of the JetBrains Plugin Marketplace REST API covering plugin lookup,
+  title: JetBrains Marketplace Plugins Updates API
+  description: 'Subset of the JetBrains Plugin Marketplace REST API covering plugin lookup,
+
     plugin details, and authenticated plugin upload.
-  version: "1.0"
+
+    '
+  version: '1.0'
   contact:
     name: JetBrains Marketplace
     url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
 servers:
-  - url: https://plugins.jetbrains.com
-    description: JetBrains Plugin Marketplace
+- url: https://plugins.jetbrains.com
+  description: JetBrains Plugin Marketplace
+tags:
+- name: Updates
 paths:
-  /plugins/list/:
-    get:
-      summary: Plugins list (deprecated)
-      description: Returns a list of plugins compatible with a given IDE build.
-      operationId: listPluginsByBuild
-      deprecated: true
-      parameters:
-        - in: query
-          name: build
-          required: true
-          description: "Format: <productCode>-<buildNumber> (e.g. IU-171.3780.107)"
-          schema: { type: string }
-      responses:
-        "200":
-          description: XML plugin list
-          content:
-            application/xml: {}
-  /plugins/list:
-    get:
-      summary: Plugin details by id
-      description: Returns plugin information (versions, channels) for a single plugin.
-      operationId: getPluginDetails
-      parameters:
-        - in: query
-          name: pluginId
-          required: true
-          description: Numeric plugin id or XML id (e.g. org.intellij.scala or 1347)
-          schema: { type: string }
-      responses:
-        "200":
-          description: Plugin details
-          content:
-            application/xml: {}
   /api/updates/upload:
     post:
       summary: Upload a plugin update
       description: Uploads a new plugin update to the JetBrains Marketplace. Max 400 MB.
       operationId: uploadPluginUpdate
       security:
-        - bearerToken: []
+      - bearerToken: []
       requestBody:
         required: true
         content:
           multipart/form-data:
             schema:
               type: object
-              required: [file]
+              required:
+              - file
               properties:
                 pluginId:
                   type: string
@@ -80,12 +52,14 @@ paths:
                   type: boolean
                   description: Declares plugin contains ads
       responses:
-        "200":
+        '200':
           description: Upload accepted
-        "401":
+        '401':
           description: Missing or invalid token
-        "413":
+        '413':
           description: Plugin exceeds the 400 MB size limit
+      tags:
+      - Updates
 components:
   securitySchemes:
     bearerToken:

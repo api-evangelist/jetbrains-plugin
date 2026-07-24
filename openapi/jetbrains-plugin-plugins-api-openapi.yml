@@ -1,0 +1,64 @@
+openapi: 3.1.0
+info:
+  title: JetBrains Marketplace Plugins API
+  description: 'Subset of the JetBrains Plugin Marketplace REST API covering plugin lookup,
+
+    plugin details, and authenticated plugin upload.
+
+    '
+  version: '1.0'
+  contact:
+    name: JetBrains Marketplace
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+servers:
+- url: https://plugins.jetbrains.com
+  description: JetBrains Plugin Marketplace
+tags:
+- name: Plugins
+paths:
+  /plugins/list/:
+    get:
+      summary: Plugins list (deprecated)
+      description: Returns a list of plugins compatible with a given IDE build.
+      operationId: listPluginsByBuild
+      deprecated: true
+      parameters:
+      - in: query
+        name: build
+        required: true
+        description: 'Format: <productCode>-<buildNumber> (e.g. IU-171.3780.107)'
+        schema:
+          type: string
+      responses:
+        '200':
+          description: XML plugin list
+          content:
+            application/xml: {}
+      tags:
+      - Plugins
+  /plugins/list:
+    get:
+      summary: Plugin details by id
+      description: Returns plugin information (versions, channels) for a single plugin.
+      operationId: getPluginDetails
+      parameters:
+      - in: query
+        name: pluginId
+        required: true
+        description: Numeric plugin id or XML id (e.g. org.intellij.scala or 1347)
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Plugin details
+          content:
+            application/xml: {}
+      tags:
+      - Plugins
+components:
+  securitySchemes:
+    bearerToken:
+      type: http
+      scheme: bearer
+      bearerFormat: PermanentToken
+      description: JetBrains Hub permanent token
