@@ -1,0 +1,16 @@
+{
+  "provider": "jetbrains-plugin",
+  "sources": [
+    "jetbrains-plugin-plugins-api-openapi.yml",
+    "jetbrains-plugin-updates-api-openapi.yml"
+  ],
+  "outputs": [
+    "jetbrains-plugin-plugins-api-openapi.yml",
+    "jetbrains-plugin-updates-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
