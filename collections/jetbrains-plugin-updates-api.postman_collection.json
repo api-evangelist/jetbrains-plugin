@@ -1,0 +1,414 @@
+{
+  "item": [
+    {
+      "id": "c84518cb-90ef-4356-b761-767aa95824c3",
+      "name": "Updates",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c2e7315d-efbb-42b9-8bdb-ef201eee8242",
+          "name": "Upload a plugin update",
+          "request": {
+            "name": "Upload a plugin update",
+            "description": {
+              "content": "Uploads a new plugin update to the JetBrains Marketplace. Max 400 MB.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "updates",
+                "upload"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": "(Required) Plugin archive (.jar, .zip, or .nupkg)"
+                },
+                {
+                  "key": "pluginId",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Numeric plugin id (use this OR xmlId)"
+                },
+                {
+                  "key": "xmlId",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Plugin XML id (use this OR pluginId)"
+                },
+                {
+                  "key": "channel",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Release channel (defaults to Stable)"
+                },
+                {
+                  "key": "isHidden",
+                  "value": "<boolean>",
+                  "type": "text",
+                  "description": "Hide the update after approval"
+                },
+                {
+                  "key": "containsAds",
+                  "value": "<boolean>",
+                  "type": "text",
+                  "description": "Declares plugin contains ads"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "11ae1c93-f7eb-49d6-b7cf-bfb07428b832",
+              "name": "Upload accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "updates",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Plugin archive (.jar, .zip, or .nupkg)",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Numeric plugin id (use this OR xmlId)",
+                        "type": "text/plain"
+                      },
+                      "key": "pluginId",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Plugin XML id (use this OR pluginId)",
+                        "type": "text/plain"
+                      },
+                      "key": "xmlId",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Release channel (defaults to Stable)",
+                        "type": "text/plain"
+                      },
+                      "key": "channel",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Hide the update after approval",
+                        "type": "text/plain"
+                      },
+                      "key": "isHidden",
+                      "value": "<boolean>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Declares plugin contains ads",
+                        "type": "text/plain"
+                      },
+                      "key": "containsAds",
+                      "value": "<boolean>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a6b5518c-3baa-432c-bc89-813b112e82a4",
+              "name": "Missing or invalid token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "updates",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Plugin archive (.jar, .zip, or .nupkg)",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Numeric plugin id (use this OR xmlId)",
+                        "type": "text/plain"
+                      },
+                      "key": "pluginId",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Plugin XML id (use this OR pluginId)",
+                        "type": "text/plain"
+                      },
+                      "key": "xmlId",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Release channel (defaults to Stable)",
+                        "type": "text/plain"
+                      },
+                      "key": "channel",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Hide the update after approval",
+                        "type": "text/plain"
+                      },
+                      "key": "isHidden",
+                      "value": "<boolean>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Declares plugin contains ads",
+                        "type": "text/plain"
+                      },
+                      "key": "containsAds",
+                      "value": "<boolean>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "00628ecf-7e0a-4c27-a3a5-5dcd650db91c",
+              "name": "Plugin exceeds the 400 MB size limit",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "updates",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Plugin archive (.jar, .zip, or .nupkg)",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Numeric plugin id (use this OR xmlId)",
+                        "type": "text/plain"
+                      },
+                      "key": "pluginId",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Plugin XML id (use this OR pluginId)",
+                        "type": "text/plain"
+                      },
+                      "key": "xmlId",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Release channel (defaults to Stable)",
+                        "type": "text/plain"
+                      },
+                      "key": "channel",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Hide the update after approval",
+                        "type": "text/plain"
+                      },
+                      "key": "isHidden",
+                      "value": "<boolean>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Declares plugin contains ads",
+                        "type": "text/plain"
+                      },
+                      "key": "containsAds",
+                      "value": "<boolean>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Request Entity Too Large",
+              "code": 413,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://plugins.jetbrains.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5eaca2bf-4b77-4bc2-870d-fe6663e52120",
+    "name": "JetBrains Marketplace Plugins Updates API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Subset of the JetBrains Plugin Marketplace REST API covering plugin lookup,\nplugin details, and authenticated plugin upload.\n\n\nContact Support:\n Name: JetBrains Marketplace",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains Marketplace Plugins Updates API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Updates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upload a plugin update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://plugins.jetbrains.com/api/updates/upload",
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "pluginId",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "xmlId",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "file",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "channel",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "isHidden",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "containsAds",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Uploads a new plugin update to the JetBrains Marketplace. Max 400 MB."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

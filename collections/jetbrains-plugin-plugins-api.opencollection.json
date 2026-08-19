@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains Marketplace Plugins API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Plugins",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Plugins list (deprecated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://plugins.jetbrains.com/plugins/list/",
+            "params": [
+              {
+                "name": "build",
+                "value": "",
+                "type": "query",
+                "description": "Format: <productCode>-<buildNumber> (e.g. IU-171.3780.107)"
+              }
+            ]
+          },
+          "docs": "Returns a list of plugins compatible with a given IDE build."
+        },
+        {
+          "info": {
+            "name": "Plugin details by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://plugins.jetbrains.com/plugins/list",
+            "params": [
+              {
+                "name": "pluginId",
+                "value": "",
+                "type": "query",
+                "description": "Numeric plugin id or XML id (e.g. org.intellij.scala or 1347)"
+              }
+            ]
+          },
+          "docs": "Returns plugin information (versions, channels) for a single plugin."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

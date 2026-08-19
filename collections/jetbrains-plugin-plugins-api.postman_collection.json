@@ -1,0 +1,202 @@
+{
+  "item": [
+    {
+      "id": "40b2accb-f5b5-4cf0-9903-fa172db8be40",
+      "name": "Plugins",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d8d7ed4a-b5d9-411b-8a18-550f15b0ee10",
+          "name": "Plugins list (deprecated)",
+          "request": {
+            "name": "Plugins list (deprecated)",
+            "description": {
+              "content": "Returns a list of plugins compatible with a given IDE build.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "plugins",
+                "list",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "build",
+                  "value": "<string>",
+                  "description": "(Required) Format: <productCode>-<buildNumber> (e.g. IU-171.3780.107)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a25471bf-84b1-43f3-9460-6525c1d807f7",
+              "name": "XML plugin list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "plugins",
+                    "list",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "build",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "895b6593-1d84-44a1-a9c8-50c8c60e4458",
+          "name": "Plugin details by id",
+          "request": {
+            "name": "Plugin details by id",
+            "description": {
+              "content": "Returns plugin information (versions, channels) for a single plugin.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "plugins",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "pluginId",
+                  "value": "<string>",
+                  "description": "(Required) Numeric plugin id or XML id (e.g. org.intellij.scala or 1347)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "261f0a63-c759-46b2-b40f-ab2d8528e0ce",
+              "name": "Plugin details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "plugins",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "pluginId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://plugins.jetbrains.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7b6b8326-d14f-4ebf-b225-3f0dd81b9913",
+    "name": "JetBrains Marketplace Plugins API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Subset of the JetBrains Plugin Marketplace REST API covering plugin lookup,\nplugin details, and authenticated plugin upload.\n\n\nContact Support:\n Name: JetBrains Marketplace",
+      "type": "text/plain"
+    }
+  }
+}
