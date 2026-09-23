@@ -1,8 +1,7 @@
 {
   "provider": "jetbrains-plugin",
   "sources": [
-    "jetbrains-plugin-plugins-api-openapi.yml",
-    "jetbrains-plugin-updates-api-openapi.yml"
+    "_original/jetbrains-plugin-openapi.yml"
   ],
   "outputs": [
     "jetbrains-plugin-plugins-api-openapi.yml",
@@ -11,6 +10,18 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "jetbrains-plugin-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "jetbrains-plugin-openapi.yml: tagged paths GET /plugins/list/ -> Plugins",
+    "jetbrains-plugin-openapi.yml: tagged paths GET /plugins/list -> Plugins",
+    "jetbrains-plugin-openapi.yml: tagged paths POST /api/updates/upload -> Updates",
+    "jetbrains-plugin-openapi.yml: declared missing tag: Plugins",
+    "jetbrains-plugin-openapi.yml: declared missing tag: Updates",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "jetbrains-plugin-plugins-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jetbrains-plugin-updates-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
