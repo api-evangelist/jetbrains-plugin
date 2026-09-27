@@ -55,7 +55,6 @@ apis:
     from the JetBrains Marketplace. Permanent tokens are issued from the My Tokens tab in the marketplace
     dashboard for plugin publishing workflows.
   humanURL: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
-  baseURL: https://plugins.jetbrains.com
   tags:
   - Plugins
   - Marketplace
@@ -74,7 +73,6 @@ apis:
   name: JetBrains Marketplace Plugins API
   description: The Plugins API from JetBrains Marketplace — 2 operation(s) for plugins.
   humanURL: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
-  baseURL: https://plugins.jetbrains.com
   tags:
   - Plugins
   properties:
@@ -84,7 +82,6 @@ apis:
   name: JetBrains Marketplace Updates API
   description: The Updates API from JetBrains Marketplace — 1 operation(s) for updates.
   humanURL: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
-  baseURL: https://plugins.jetbrains.com
   tags:
   - Updates
   properties:
