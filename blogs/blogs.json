@@ -1,0 +1,14 @@
+{
+  "repo": "jetbrains-plugin",
+  "feeds": [
+    {
+      "source": "https://blog.jetbrains.com/feed/",
+      "feed_url": "https://blog.jetbrains.com/feed/",
+      "title": "",
+      "saved": 12,
+      "method": "feed"
+    }
+  ],
+  "post_count": 12,
+  "fetched": "2026-10-10T13:15:00Z"
+}
