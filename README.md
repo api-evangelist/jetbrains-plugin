@@ -1,4 +1,4 @@
-# JetBrains Marketplace (jetbrains-plugin)
+# JetBrains Marketplace
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,62 +66,101 @@
 
 JetBrains Marketplace is the official plugin and theme distribution platform for JetBrains IDEs including IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, and other IntelliJ Platform products. The marketplace hosts thousands of free and paid plugins that extend IDE functionality with new languages, frameworks, tools, themes, and integrations. JetBrains Marketplace provides REST APIs for listing plugins, uploading new plugin builds, and downloading plugin updates programmatically.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/jetbrains-plugin/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/jetbrains-plugin/refs/heads/main/apis.yml)
+**Areas:** Plugins · IDE · Marketplace · Developer Tools · JetBrains · IntelliJ
 
-## Scope
+## JetBrains Marketplace on APIs.io
 
-- **Type:** Index
+Everything profiled for JetBrains Marketplace is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/jetbrains-plugin/](https://apis.io/providers/jetbrains-plugin/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (3)
 
-- Plugins
-- IDE
-- Marketplace
-- Developer Tools
-- JetBrains
-- IntelliJ
+- [JetBrains Marketplace API](https://apis.io/apis/jetbrains-plugin/marketplace-api/) — REST API for listing available plugins, uploading new plugin builds, and downloading plugin updates from the JetBrains Marketplace. Permanent tokens are…
+- [JetBrains Marketplace Plugins API](https://apis.io/apis/jetbrains-plugin/jetbrains-plugin-plugins-api/) — The Plugins API from JetBrains Marketplace — 2 operation(s) for plugins.
+- [JetBrains Marketplace Updates API](https://apis.io/apis/jetbrains-plugin/jetbrains-plugin-updates-api/) — The Updates API from JetBrains Marketplace — 1 operation(s) for updates.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### JetBrains Marketplace API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for listing available plugins, uploading new plugin builds, and downloading plugin updates from the JetBrains Marketplace. Permanent tokens are issued from the My Tokens tab in the marketplace dashboard for plugin publishing workflows.
+- [Jetbrains Plugin Agentic Access](https://apis.io/agentic-access/jetbrains-plugin/jetbrains-plugin-agentic-access/)
 
-- **Human URL:** [https://plugins.jetbrains.com/docs/marketplace/api-reference.html](https://plugins.jetbrains.com/docs/marketplace/api-reference.html)
-- **Base URL:** `https://plugins.jetbrains.com`
+#### Collections (3)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Plugins
-- Marketplace
-- Plugin Distribution
-- IDE Extensions
+- [JetBrains Marketplace API](https://apis.io/collections/jetbrains-plugin/open-jetbrains-plugin/)
+- [JetBrains Marketplace Plugins API](https://apis.io/collections/jetbrains-plugin/open-jetbrains-plugin-plugins-api/)
+- [JetBrains Marketplace Plugins Updates API](https://apis.io/collections/jetbrains-plugin/open-jetbrains-plugin-updates-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://plugins.jetbrains.com/docs/marketplace/api-reference.html)
-- [Plugins  List  A P I](https://plugins.jetbrains.com/docs/marketplace/plugins-list.html)
-- [Plugin  Upload  A P I](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html)
-- [Plugin  Update  Download  A P I](https://plugins.jetbrains.com/docs/marketplace/plugin-update-download.html)
-- [Postman Collection](collections/jetbrains-plugin.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jetbrains-plugin.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Jetbrains Plugin Authentication](https://apis.io/security/jetbrains-plugin/jetbrains-plugin-authentication/)
+- [Jetbrains Plugin Domain Security](https://apis.io/security/jetbrains-plugin/jetbrains-plugin-domain-security/)
+- [Jetbrains Plugin Vulnerability Disclosure](https://apis.io/security/jetbrains-plugin/jetbrains-plugin-vulnerability-disclosure/)
 
-- [LinkedIn](https://www.linkedin.com/showcase/jetbrains-marketplace)
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://plugins.jetbrains.com)
 - [Documentation](https://plugins.jetbrains.com/docs/marketplace/about-marketplace.html)
-- [Developer  Portal](https://plugins.jetbrains.com/developers/marketplace)
-- [Git Hub  Documentation](https://github.com/JetBrains/marketplace-docs)
-- [Sign Up](https://account.jetbrains.com/login)
 - [Pricing](https://plugins.jetbrains.com/legal/marketplace-paid-plugins)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 28.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 49.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 31.0 |
+| Access clarity | 23.7 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/jetbrains-plugin/](https://apis.io/providers/jetbrains-plugin/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for JetBrains Marketplace: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/jetbrains-plugin/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
